@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package merch;
+
+service MerchGrpcService {
+  rpc GetByIdsNew (ServiceRequest) returns (ServiceResponse) {}
+}
+
+message ServiceRequest {
+  required string query = 1;
+  optional string headers = 2;
+  optional string cookies = 3;
+}
+
+message ServiceResponse {
+  required string data = 1;
+  optional string headers = 2;
+  optional string cookies = 3;
+}

@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package utils;
+
+service UtilsGrpcService {
+  rpc Banner (ServiceRequest) returns (ServiceResponse) {}
+  rpc Deeplink (ServiceRequest) returns (ServiceResponse) {}
+  rpc MetaInfo (ServiceRequest) returns (ServiceResponse) {}
+  rpc Deeplinks (ServiceRequest) returns (ServiceResponse) {}
+  rpc DeeplinksUrl (ServiceRequest) returns (ServiceResponse) {}
+
+}
+
+message ServiceRequest {
+  required string request = 1;
+}
+
+message ServiceResponse {
+  required string response = 1;
+}
